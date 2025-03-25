@@ -7,9 +7,7 @@ import { MoonStar, SunDim } from "lucide-react"
 export function ThemeToggleManual() {
   const [isDarkMode, setIsDarkMode] = useState(false)
 
-  // Initialize theme based on user preferences or localStorage
   useEffect(() => {
-    // Check if there's a saved preference
     const savedTheme = localStorage.getItem("theme")
 
     if (savedTheme === "dark") {
@@ -19,7 +17,6 @@ export function ThemeToggleManual() {
       setIsDarkMode(false)
       document.documentElement.classList.remove("dark")
     } else {
-      // If no saved preference, use system preference
       const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches
       setIsDarkMode(prefersDark)
       if (prefersDark) {

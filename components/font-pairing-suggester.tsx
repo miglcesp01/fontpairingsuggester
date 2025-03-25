@@ -17,14 +17,12 @@ export function FontPairingSuggester() {
   const [searchQuery, setSearchQuery] = useState("")
   const [openFontDetails, setOpenFontDetails] = useState<Font | null>(null)
 
-  // Filter fonts based on category and search query
   const filteredFonts = fontData.filter((font) => {
     const matchesCategory = selectedCategory ? font.category === selectedCategory : true
     const matchesSearch = searchQuery ? font.name.toLowerCase().includes(searchQuery.toLowerCase()) : true
     return matchesCategory && matchesSearch
   })
 
-  // Get font pairings for the selected font
   const fontPairings = selectedFont ? fontData.filter((font) => selectedFont.pairings.includes(font.id)) : []
 
   return (

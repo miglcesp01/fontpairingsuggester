@@ -4,7 +4,6 @@ import "@/app/globals.css"
 export const metadata = {
   title: "Font Pairing Suggester",
   description: "Find the perfect font combinations for your next project",
-  generator: "v0.dev",
 }
 
 export default function RootLayout({
@@ -24,9 +23,3 @@ export default function RootLayout({
     </html>
   )
 }
-
-import "./globals.css"
-
-
-
-import './globals.css'
